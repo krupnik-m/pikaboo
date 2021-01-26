@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['/']">
+      Pikaboo
+    </a>
+    <ul class="nav navbar-nav pull-xs-right">
+      <li class="nav-item">
+        <a [routerLink]="['/']" class="nav-link">Home</a>
+      </li>
+      <ng-container *ngIf="isLogedIn$ | async">
+        <li class="nav-item">
+          <a [routerLink]="['/articals-new']" class="nav-link">
+          <i ></i>
+          </a>
+
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</nav>
