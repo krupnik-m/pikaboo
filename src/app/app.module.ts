@@ -12,6 +12,7 @@ import {TopBarModule} from './shared/modules/top-bar/top-bar.module';
 import {PersistanceService} from "./shared/services/persistense.service";
 import {AuthInterceptor} from "./shared/services/auth-interceptor.service";
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {GlobalFeedModule} from "./global-feed/global-feed.module";
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import {HTTP_INTERCEPTORS} from "@angular/common/http";
       logOnly: environment.production
     }),
     TopBarModule,
+    GlobalFeedModule
   ],
   providers: [PersistanceService,
     {
