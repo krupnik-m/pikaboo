@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Store} from "@ngrx/store";
+import {getFeedAction} from "../../store/actions/get-feed.action";
 
 @Component({
   selector: 'app-feed',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedComponent implements OnInit {
 
-  constructor() { }
+  @Input('apiUrl') apiUrlProps: string;
+
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
+    this.store.dispatch(getFeedAction({url:this.apiUrlProps}))
   }
 
 }
