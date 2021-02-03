@@ -1,6 +1,7 @@
-import {createAction, props} from "@ngrx/store";
-import {ActionTypes} from "../action-types";
-import {GetFeedResponseInterface} from "../../types/get-feed-response.interface";
+import {createAction, props} from '@ngrx/store';
+
+import {ActionTypes} from '../action-types';
+import {GetFeedResponseInterface} from '../../types/get-feed-response.interface';
 
 export const getFeedAction = createAction(
   ActionTypes.GET_FEED,

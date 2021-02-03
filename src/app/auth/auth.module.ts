@@ -14,7 +14,7 @@ import {BackendErrorMessagesModule} from '../shared/modules/backend-error-messag
 import {PersistanceService} from '../shared/services/persistense.service';
 import {LoginEffect} from './store/effects/login.effect';
 import {LoginComponent} from './components/login/login.component';
-import {GetCurrentUserEffect} from "./store/effects/get-current-user.effect";
+import {GetCurrentUserEffect} from './store/effects/get-current-user.effect';
 
 const routes: Routes = [{
   path: 'register',

@@ -7,7 +7,7 @@ import {
   getCurrentUserAction,
   getCurrentUserFailureAction,
   getCurrentUserSuccessAction
-} from "../actions/get-current-user.action";
+} from '../actions/get-current-user.action';
 
 const initialState: AuthStateInterface = {
   isSubmitting: false,

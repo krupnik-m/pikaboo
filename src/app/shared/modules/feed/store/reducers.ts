@@ -1,12 +1,13 @@
-import {FeedStateInterface} from "../types/feed-state.interface";
-import {getFeedAction, getFeedFailureAction, getFeedSuccessAction} from "./actions/get-feed.action";
-import {Action, createReducer, on} from "@ngrx/store";
+import {Action, createReducer, on} from '@ngrx/store';
+
+import {FeedStateInterface} from '../types/feed-state.interface';
+import {getFeedAction, getFeedFailureAction, getFeedSuccessAction} from './actions/get-feed.action';
 
 const initialState: FeedStateInterface = {
   isLoading: false,
   error: null,
   data: null,
-}
+};
 
 const feedReducer = createReducer(
   initialState,
@@ -23,7 +24,7 @@ const feedReducer = createReducer(
     ...state,
     isLoading: false
   }))
-)
+);
 
 export function reducers(state: FeedStateInterface, action: Action) {
   return feedReducer(state, action);

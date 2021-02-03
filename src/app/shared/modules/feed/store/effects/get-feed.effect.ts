@@ -4,10 +4,10 @@ import {catchError, map, switchMap} from 'rxjs/operators';
 import {of} from 'rxjs';
 
 
-import {FeedService} from "../../services/feed.services";
-import {AuthService} from "../../../../../auth/services/auth.service";
-import {getFeedAction, getFeedFailureAction, getFeedSuccessAction} from "../actions/get-feed.action";
-import {GetFeedResponseInterface} from "../../types/get-feed-response.interface";
+import {FeedService} from '../../services/feed.services';
+import {AuthService} from '../../../../../auth/services/auth.service';
+import {getFeedAction, getFeedFailureAction, getFeedSuccessAction} from '../actions/get-feed.action';
+import {GetFeedResponseInterface} from '../../types/get-feed-response.interface';
 
 
 @Injectable()

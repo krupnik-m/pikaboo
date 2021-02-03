@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
@@ -9,11 +10,9 @@ import {AppComponent} from './app.component';
 import {AuthModule} from './auth/auth.module';
 import {environment} from '../environments/environment';
 import {TopBarModule} from './shared/modules/top-bar/top-bar.module';
-import {PersistanceService} from "./shared/services/persistense.service";
-import {AuthInterceptor} from "./shared/services/auth-interceptor.service";
-import {HTTP_INTERCEPTORS} from "@angular/common/http";
-import {GlobalFeedModule} from "./global-feed/global-feed.module";
-
+import {PersistanceService} from './shared/services/persistense.service';
+import {AuthInterceptor} from './shared/services/auth-interceptor.service';
+import {GlobalFeedModule} from './global-feed/global-feed.module';
 
 @NgModule({
   declarations: [

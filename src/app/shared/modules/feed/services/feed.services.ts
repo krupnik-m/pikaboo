@@ -1,10 +1,9 @@
-import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
-import {GetFeedResponseInterface} from "../types/get-feed-response.interface";
-import {environment} from "../../../../../environments/environment";
-
+import {GetFeedResponseInterface} from '../types/get-feed-response.interface';
+import {environment} from '../../../../../environments/environment';
 
 @Injectable()
 export class FeedService {

@@ -10,7 +10,7 @@ import {
   getCurrentUserAction,
   getCurrentUserFailureAction,
   getCurrentUserSuccessAction
-} from "../../actions/get-current-user.action";
+} from '../../actions/get-current-user.action';
 
 
 @Injectable()
@@ -20,7 +20,7 @@ export class GetCurrentUserEffect {
     switchMap(() => {
         const token = this.persistanceService.get('accessToken');
         if (!token) {
-          return of(getCurrentUserFailureAction)
+          return of(getCurrentUserFailureAction());
         }
         return this.authService.getCurrentUser()
           .pipe(map((currentUser: CurrentUserInterface) => {

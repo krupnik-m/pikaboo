@@ -1,7 +1,7 @@
-import {ProfileInterface} from "./profile.interface";
+import {ProfileInterface} from './profile.interface';
 
 export interface ArticleInterface {
-  author: ProfileInterface
+  author: ProfileInterface;
   body: string;
   createdAt: string;
   description: string;
