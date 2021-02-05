@@ -9,6 +9,8 @@ import {FeedComponent} from './components/feed/feed.component';
 import {GetFeedEffect} from './store/effects/get-feed.effect';
 import {reducers} from './store/reducers';
 import {FeedService} from './services/feed.services';
+import {ErrorMessageModule} from "../error-message/error-message.module";
+import {LoadingModule} from "../loading/loading.module";
 
 @NgModule({
   imports: [
@@ -16,7 +18,9 @@ import {FeedService} from './services/feed.services';
     HttpClientModule,
     RouterModule,
     EffectsModule.forFeature([GetFeedEffect]),
-    StoreModule.forFeature('feed', reducers)
+    StoreModule.forFeature('feed', reducers),
+    ErrorMessageModule,
+    LoadingModule
   ],
   declarations: [FeedComponent],
   exports: [FeedComponent],
